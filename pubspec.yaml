@@ -1,0 +1,26 @@
+name: servenow
+description: "ServeNow — on-demand home services booking + essentials shop. A production-style Flutter showcase: catalog, cart, checkout, live booking tracking, notifications and mock REST API."
+# Prevent accidental publishing to pub.dev.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # The only state-management dependency, kept deliberately small.
+  # Swap for Riverpod/Bloc later without touching the UI: providers only
+  # expose plain state + methods, screens never call the API directly.
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/
